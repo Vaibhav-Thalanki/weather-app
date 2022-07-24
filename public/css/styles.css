@@ -1,0 +1,53 @@
+
+img.portrait{
+    width: 250px;
+}
+img.weather-icons{
+    width: 30px;
+}
+div#pics{
+    text-align: center;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 50%;
+    margin: 0 auto;
+}
+footer{
+    color: #888888;
+    border-top: 1px solid #a7a3a3;
+    margin-top: 10px;
+    padding: 16px 0;
+}
+header{
+    margin-top: 16px;
+    margin-bottom: 48px;
+}
+h1{
+    font-size: 64px;
+    margin-bottom: 16px;
+}
+header a{
+    color: #888888;
+    margin-right: 16px;
+    text-decoration: none;
+}
+header a:hover{
+    color: aqua;
+}
+form{
+    text-align: center;
+}
+input{
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 8px;
+    margin-right: 20px;
+}
+button{
+    cursor: pointer;
+    color: white;
+    background-color: black;
+    padding: 8px;
+    border-radius: 10px;
+}
