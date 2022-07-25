@@ -32,7 +32,7 @@ const forecast = (lat, lon, callback) => {
             current.humidity +
             " and cloud cover is " +
             current.cloudcover +
-            ".",
+            ". The pressure is "+ current.pressure+".",
           pictures: current.weather_icons,
         });
       }
