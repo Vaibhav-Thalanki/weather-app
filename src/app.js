@@ -3,6 +3,7 @@ const express = require("express");
 const geocode = require("./utils/geocode.js");
 const forecast = require("./utils/forecast.js");
 const app = express();
+const port = process.env.PORT || 3000;
 const hbs = require("hbs");
 
 // Paths
@@ -44,7 +45,10 @@ app.get("", (req, res) => {
     forecast(
       latitude,
       longitude,
-      (err, { current, location: place, forecast = null,pictures=null } = {}) => {
+      (
+        err,
+        { current, location: place, forecast = null, pictures = null } = {}
+      ) => {
         if (err) {
           // res.render("error", {
           //   title: "Something went wrong!",
@@ -67,7 +71,7 @@ app.get("", (req, res) => {
           location: place,
           weather: current,
           forecast,
-          pictures
+          pictures,
         });
       }
     );
@@ -112,6 +116,6 @@ app.get("*", (req, res) => {
   });
 });
 
-app.listen(3000, () => {
-  console.log("Server Started on port 3000");
+app.listen(port, () => {
+  console.log("Server Started on port " + port);
 });

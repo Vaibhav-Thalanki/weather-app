@@ -6,7 +6,7 @@ document.addEventListener("submit",(event)=>{
     document.querySelector("p#msg").textContent ="Loading...";
     event.preventDefault();
     const location = searchLocation.value;
-    fetch('http://localhost:3000?location='+location).then((response)=>{
+    fetch('/?location='+location).then((response)=>{
     response.json().then((data)=>{
         console.log(data);
         if(data.error)
